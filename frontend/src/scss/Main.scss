@@ -1,1 +1,9 @@
-@use "./Imports.scss";
+@use "./Global.scss";
+@use "./misc/misc.scss";
+
+@use "./BackDrop/BackDropStyles.scss";
+@use "./CartScreen/CartScreenStyles.scss";
+@use "./Homescreen/HomescreenStyles.scss";
+@use "./NavBar/NavBarStyles.scss";
+@use "./ProductScreen/ProductScreenStyles.scss";
+@use "./SideDrawer/SideDrawerStyles.scss";

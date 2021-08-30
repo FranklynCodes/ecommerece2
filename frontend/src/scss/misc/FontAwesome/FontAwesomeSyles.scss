@@ -1,0 +1,10 @@
+@mixin Font-Awesome {
+    font-size: large;
+}
+
+.FontAwesome {
+    .fas{
+        @include Font-Awesome;
+    }
+    
+}
