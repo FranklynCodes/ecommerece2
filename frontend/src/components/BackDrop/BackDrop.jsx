@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export default function BackDrop() {
-    return (
-        <div id ="CartScreen">
-            
-        </div>
-    )
+export default function BackDrop({ show, click }) {
+	return show && <div id="BACKDROP-STYLE" onClick={click}></div>;
 }
