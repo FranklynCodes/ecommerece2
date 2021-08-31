@@ -15,7 +15,7 @@
 	flex-direction: column;
 	justify-content: center;
 
-	.links {
+	.sidedrawer-links {
 		display: flex;
 		flex-direction: column;
 		list-style: none;
@@ -37,8 +37,8 @@
 					// Might be wrong
 					background: #333;
 					color: #f4f4f4;
-					.cartbadge {
-						background-color: #fff;
+					.sidedrawer-cartbadge {
+						background-color: #f4f4f4;
 						color: #171717;
 					}
 				}
@@ -49,7 +49,7 @@
 				}
 			}
 		}
-		.cartbadge {
+		.sidedrawer-cartbadge {
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -72,5 +72,4 @@
 	.sidedrawer {
 		display: none;
 	}
-	
 }

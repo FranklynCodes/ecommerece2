@@ -2,13 +2,13 @@ import React, { useState } from "react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import HomeScreen from "./components/Homescreen/Homescreen";
-import ProductScreen from "./components/ProductScreen/ProductScreen";
-import CartScreen from "./components/CartScreen/CartScreen";
+import HomeScreen from "./screens/Homescreen.jsx";
+import ProductScreen from "./screens/ProductScreen.jsx";
+import CartScreen from "./screens/CartScreen.jsx";
 
-import NavBar from "./components/NavBar/NavBar";
-import BackDrop from "./components/BackDrop/BackDrop";
-import SideDrawer from "./components/SideDrawer/SideDrawer";
+import NavBar from "./components/NavBar";
+import BackDrop from "./components/BackDrop";
+import SideDrawer from "./components/SideDrawer";
 
 function App() {
 	const [sideDrawerToggle, setSideDrawerToggle] = useState(false);
@@ -19,8 +19,13 @@ function App() {
 					setSideDrawerToggle(true);
 				}}
 			/>
-			<SideDrawer show={sideDrawerToggle} />
-			
+			<SideDrawer
+				show={sideDrawerToggle}
+				click={() => {
+					setSideDrawerToggle(true);
+				}}
+			/>
+
 			<BackDrop
 				show={sideDrawerToggle}
 				click={() => {
