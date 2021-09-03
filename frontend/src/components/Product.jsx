@@ -8,9 +8,7 @@ export default function Product({ imageUrl, description, price, name, productId 
 
 			<div className="product-info">
 				<p className="product-info-name">{name}</p>
-				{/* <p className="product-info-description">
-					<p className="product-info-description">{description.substring(0, 100)}...</p>
-				</p> */}
+				<p className="product-info-description">{description.substring(0, 100)}...</p>
 				<p className="product-info-price">${price}</p>
 				<Link to={`/product/${productId}`} className="product-info-button">
 					View
