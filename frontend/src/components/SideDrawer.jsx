@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 export default function SideDrawer({ show, click }) {
@@ -8,6 +9,17 @@ export default function SideDrawer({ show, click }) {
 		// Animation via css class
 		sideDrawerClass.push("show");
 	}
+	const cart = useSelector((state) => {
+		state.cart;
+	});
+	const { cartItems } = cart;
+
+	const getCartCount = () => {
+		return cartItems.reduce((qty, item) => {
+			// Note
+			qty + Number(item.qty), 0;
+		});
+	};
 	return (
 		<div className={sideDrawerClass.join(" ")}>
 			<ul className="sidedrawer-links" onClick={click}>
@@ -16,7 +28,7 @@ export default function SideDrawer({ show, click }) {
 						<i className="fas fa-shopping-cart"></i>
 						<span>
 							Cart
-							<span className="sidedrawer-cartbadge">0</span>
+							<span className="sidedrawer-cartbadge">{getCartCount()}</span>
 						</span>
 					</Link>
 				</li>
