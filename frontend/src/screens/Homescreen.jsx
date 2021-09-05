@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Product from "../components/Product";
 
 // Actions
-import { getProducts as imptListProducts } from "../redux/actions/productAction.js";
+import { getProducts as imptListProducts } from "../redux/actions/productActions.js";
 
 export default function Homescreen() {
 	const dispatch = useDispatch();
