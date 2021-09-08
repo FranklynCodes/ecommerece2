@@ -9,14 +9,10 @@ const ProductScreen = ({ match, history }) => {
 	const [qty, setQty] = useState(1);
 	const dispatch = useDispatch();
 
-	const productDetails = useSelector((state) => {
-		state.getProductDetails;
-	});
+	const productDetails = useSelector((state) => state.getProductDetails);
 	const { loading, error, product } = productDetails;
 
 	useEffect(() => {
-		// match.params = id url slug
-		console.log("match.params.id:", match.params.id);
 		if (product && match.params.id !== product._id) {
 			dispatch(getProductDetails(match.params.id));
 		}
@@ -35,7 +31,6 @@ const ProductScreen = ({ match, history }) => {
 				<h2>{error}</h2>
 			) : (
 				<>
-					{/* Product object propeties is dynamically loading from state */}
 					<div className="productscreen__left">
 						<div className="left__image">
 							<img src={product.imageUrl} alt={product.name} />

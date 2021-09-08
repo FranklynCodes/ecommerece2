@@ -2,16 +2,12 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 export default function NavBar({ click }) {
-	const cart = useSelector((state) => {
-		state.cart;
-	});
+	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
 
 	const getCartCount = () => {
-		return cartItems.reduce((qty, item) => {
-			// Note
-			qty + Number(item.qty), 0;
-		});
+		return cartItems.reduce((qty, item) => qty + Number(item.qty), 0);
+		// Note
 	};
 
 	return (

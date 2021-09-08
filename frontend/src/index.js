@@ -12,7 +12,6 @@ import store from "./redux/store.js";
 ReactDOM.render(
 	<Provider store={store}>
 		<React.StrictMode>
-			{/* <h1>Ecommerce APP </h1> */}
 			<App />
 		</React.StrictMode>
 	</Provider>,

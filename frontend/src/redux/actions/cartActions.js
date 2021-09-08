@@ -16,6 +16,7 @@ export const addToCart = (id, qty) => async (dispatch, getState) => {
 			imageUrl: data.imageUrl,
 			price: data.price,
 			countInStock: data.countInStock,
+			qty,
 		},
 	});
 	// Once done with dispatch cart data save to localStorge via getState from redux thunk
