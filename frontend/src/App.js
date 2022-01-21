@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import HomeScreen from "./screens/Homescreen.jsx";
-import ProductScreen from "./screens/ProductScreen.jsx";
-import CartScreen from "./screens/CartScreen.jsx";
+import HomeScreen from "./screens/Homescreen";
+import ProductScreen from "./screens/ProductScreen";
+import CartScreen from "./screens/CartScreen";
 
 import NavBar from "./components/NavBar";
 import BackDrop from "./components/BackDrop";

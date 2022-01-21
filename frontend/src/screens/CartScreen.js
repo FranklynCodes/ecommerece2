@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ import CartItem from "../components/CartItem";
 import { addToCart, removeFromCart } from "../redux/actions/cartActions";
 
 const CartScreen = () => {
-	const dispatch = useDispatch(); // require to redispatch cart on change of qty
+	const dispatch = useDispatch();
 
 	const cart = useSelector((state) => state.cart);
 	const { cartItems } = cart;
