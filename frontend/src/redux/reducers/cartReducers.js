@@ -11,9 +11,7 @@ export const cartReducer = (state = CART_INITIAL_STATE, action) => {
 			const item = action.payload;
 
 			// Accpets ID as action.payload Searches through state to see if a match is found stroing data in existItem EX: Adding +1 to cart
-			const existItem = state.cartItems.find((x) => {
-				return x.product === item.product;
-			});
+			const existItem = state.cartItems.find((x) => x.product === item.product);
 			// if id is equal to item id
 
 			// console.log("existItem:", existItem);
@@ -39,7 +37,7 @@ export const cartReducer = (state = CART_INITIAL_STATE, action) => {
 			// Which ever cartitem id does not match action id, current element is stored onto the end of the array is not returned in the new array created via filter
 			return {
 				...state,
-				cartItems: state.cartItems.filter((x) => x.product !== action.product),
+				cartItems: state.cartItems.filter((x) => x.product !== action.payload),
 			};
 
 		default:

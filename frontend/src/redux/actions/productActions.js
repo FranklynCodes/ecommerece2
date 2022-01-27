@@ -38,7 +38,7 @@ export const getProductDetails = (id) => async (dispatch) => {
 		});
 	} catch (error) {
 		dispatch({
-			type: actionTypes.GET_PRODUCTS_FAIL,
+			type: actionTypes.GET_PRODUCT_DETAILS_FAIL,
 			// If error has a .response and response.data.message then send error.response.data.message back to payload if false send error.message
 			payload:
 				error.response && error.response.data.message
@@ -49,7 +49,5 @@ export const getProductDetails = (id) => async (dispatch) => {
 };
 // # When you switch back to a screen remove the state
 export const removeProductDetails = () => (dispatch) => {
-	dispatch({
-		type: actionTypes.GET_PRODUCT_DETAILS_RESET,
-	});
+	dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_RESET });
 };
