@@ -13,7 +13,7 @@ export default function NavBar({ click }) {
 	return (
 		<nav id="NAV-BAR-STYLES">
 			<div className="navbar-logo">
-				<h2>MERN Ecommerce</h2>
+				<h2>Tech Center</h2>
 			</div>
 			<ul className="navbar-links">
 				<li>

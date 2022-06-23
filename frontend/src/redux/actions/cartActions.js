@@ -35,5 +35,8 @@ export const removeFromCart = (id) => (dispatch, getState) => {
 
 /**
  * What is the dispatch method used for?
- * How do we use redux thunk in order to use "async (dispatch)"
+ * How do we use redux thunk in order to use "async (dispatch)" Asynchrony in React-Redux is often done via a thunk. This thunk function is middleware that unlocks async operations by deferring execution. 
+ * 
+ * * In this take, we’ll dive into what happens when there is more than a single async request. 
+ * Async code is unpredictable because completion is not known ahead of time and multiple requests complicate things.
  */
