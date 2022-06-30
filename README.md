@@ -1,4 +1,5 @@
 # Tech Center
+Will be updating documentation everything will be updated by july 4th.
 
 Redux variation of an e-commerce website instead of using useContext.
 
